@@ -18,6 +18,7 @@ const SOCIAL_LINKS = {
 const PROJECTS = [
   {
     name: "BazarDor",
+    image: "images/bazardor.png",
     url: "bazardor-app.vercel.app",
     description:
       "A daily market-price app with category browsing, price sorting, market-wise product details, secure login, and editable user profiles.",
@@ -28,6 +29,7 @@ const PROJECTS = [
   },
   {
     name: "FitLog",
+    image: "images/fitlog.png",
     url: "fitlog-zeta-ten.vercel.app",
     description:
       "A workout library with search, filters, sorting, exercise details, saved workouts, and a personal plan with completion tracking.",
@@ -38,6 +40,7 @@ const PROJECTS = [
   },
   {
     name: "DevStack",
+    image: "images/devstack.png",
     url: "dev-stack-eight.vercel.app",
     description:
       "Explore development technologies and build a personal stack. Add technologies, remove individual items, or clear the entire stack.",
@@ -182,9 +185,14 @@ function renderProjects(){
           <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
           <span class="browser-url">${p.url}</span>
         </div>
-        <div class="browser-screen" style="background:${p.gradient}">
-          <span class="screen-label">${p.name}</span>
-        </div>
+        <div class="browser-screen">
+  <img
+    src="${p.image}"
+    alt="${p.name} website preview"
+    class="project-preview"
+    loading="lazy"
+  />
+</div>
       </div>
       <div class="project-info">
         <h3>${p.name}</h3>
