@@ -8,44 +8,44 @@
 // every social icon on the page (contact section + footer)
 // pulls from this one place.
 const SOCIAL_LINKS = {
-  facebook:  "https://facebook.com/yourusername",
-  instagram: "https://instagram.com/yourusername",
-  github:    "https://github.com/yourusername",
-  linkedin:  "https://linkedin.com/in/yourusername",
-  email:     "minhajultanjil143@gmail.com"
+  github: "https://github.com/iamminhaz31",
+  linkedin: "https://www.linkedin.com/in/minhajul-islam-tanjil/",
+  email: "minhajultanjil143@gmail.com"
 };
 
 // Your projects. Copy an object below, change the fields, done.
 // gradient accepts any CSS gradient — reuse the palette or add your own.
 const PROJECTS = [
   {
-    name: "TaskFlow",
-    url: "taskflow.app",
-    description: "A drag-and-drop task manager with boards, labels, and real-time sync across devices.",
-    tags: ["React", "Node.js", "MongoDB"],
-    gradient: "linear-gradient(135deg, #4a6958, #1b2922)",
-    liveLink: "#",
-    sourceLink: "#"
+    name: "BazarDor",
+    url: "bazardor-app.vercel.app",
+    description:
+      "A daily market-price app with category browsing, price sorting, market-wise product details, secure login, and editable user profiles.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Better Auth"],
+    gradient: "linear-gradient(135deg, #059669, #064e3b)",
+    liveLink: "https://bazardor-app.vercel.app/",
+    sourceLink: "https://github.com/iamminhaz31/bazardor-app"
   },
   {
-    name: "Weatherly",
-    url: "weatherly.io",
-    description: "A minimalist weather dashboard with hourly forecasts, powered by a public weather API.",
-    tags: ["JavaScript", "REST API", "Chart.js"],
-    gradient: "linear-gradient(135deg, #435146, #1c1c1c)",
-    liveLink: "#",
-    sourceLink: "#"
+    name: "FitLog",
+    url: "fitlog-zeta-ten.vercel.app",
+    description:
+      "A workout library with search, filters, sorting, exercise details, saved workouts, and a personal plan with completion tracking.",
+    tags: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
+    gradient: "linear-gradient(135deg, #657c14, #171d0b)",
+    liveLink: "https://fitlog-zeta-ten.vercel.app/",
+    sourceLink: "https://github.com/iamminhaz31/fitlog"
   },
   {
-    name: "Shelfie",
-    url: "shelfie.store",
-    description: "A small e-commerce storefront with cart, checkout flow, and an admin product dashboard.",
-    tags: ["React", "Stripe", "Express"],
-    gradient: "linear-gradient(135deg, #4a6958, #435146)",
-    liveLink: "#",
-    sourceLink: "#"
+    name: "DevStack",
+    url: "dev-stack-eight.vercel.app",
+    description:
+      "Explore development technologies and build a personal stack. Add technologies, remove individual items, or clear the entire stack.",
+    tags: ["React", "JavaScript", "Tailwind CSS", "Vite"],
+    gradient: "linear-gradient(135deg, #4338ca, #1e1b4b)",
+    liveLink: "https://dev-stack-eight.vercel.app/",
+    sourceLink: "https://github.com/iamminhaz31/dev-stack"
   }
-  // Add more projects by copying the block above.
 ];
 
 // Your blog posts. Link can point to a Medium/Hashnode/dev.to post or a local page.
@@ -78,10 +78,11 @@ const BLOG_POSTS = [
 // NOTE: dates and grade are placeholders below — update them to your exact figures.
 const EDUCATION = [
   {
-    degree: "B.Sc. in Computer Science & Engineering",
+    degree: "B.Sc. in Computer Science and Engineering",
     org: "Green University of Bangladesh",
-    period: "2022 – 2026 (Final Year)",
-    detail: "Coursework spanning web technologies, software engineering, and applied research, alongside hands-on project work."
+    period: "2022 – September 2026",
+    detail:
+      "Completed a degree in Computer Science and Engineering, with academic work in programming, databases, software development, and machine learning. Conducted research on audio-visual deepfake detection."
   }
 ];
 
@@ -105,14 +106,15 @@ const EXPERIENCE = [
 // Your achievements and awards.
 const ACHIEVEMENTS = [
   {
-    title: "1st Place — BUET Science Fest",
-    detail: "Won first place for an original science project presented at BUET's Science Fest."
+    title: "Top 3 — Integrated Design Project, 2025",
+    detail:
+      "MoneyBag was recognized among the top three projects in the IDP course at Green University of Bangladesh. Received the award from the Vice-Chancellor and Dean."
   },
   {
-    title: "University Recognition",
-    detail: "Recognized by the university for an outstanding web application project."
+    title: "1st Place — Science & Technology Fair, 2017",
+    detail:
+      "Secured first place in the Mechanical group of the Science Project competition at the Inter-School/College Science & Technology Fair, organized by EUSCIAN Science & Technology Club."
   }
-  // Add more achievements by copying the block above.
 ];
 
 // Your client testimonials. Avatar text is auto-generated from the name's initials.
@@ -313,9 +315,11 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ===== Active nav link on scroll =====
-const sections = ['top', 'about', 'services', 'blog', 'contact']
+// ===== Active nav link on scroll =====
+const sections = ['top', 'about', 'services', 'projects', 'contact']
   .map(id => document.getElementById(id))
   .filter(Boolean);
+
 const navLinkEls = document.querySelectorAll('.nav-link');
 
 const sectionObserver = new IntersectionObserver((entries) => {
@@ -432,9 +436,9 @@ document.querySelectorAll('.magnetic').forEach(btn => {
 const typewriterEl = document.getElementById('typewriter');
 const CODE_LINES = [
   { text: "const developer = {", color: "text" },
-  { text: "  name: 'Minhazz',", color: "text" },
+  { text: "  name: 'Minhajul Islam Tanjil',", color: "text" },
   { text: "  role: 'Full-Stack Developer',", color: "text" },
-  { text: "  stack: ['React', 'Node.js', 'MongoDB'],", color: "text" },
+  { text: "  stack: ['React', 'Next.js', 'TypeScript'],", color: "text" },
   { text: "  available: true", color: "text" },
   { text: "};", color: "text" }
 ];
