@@ -1130,3 +1130,355 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   object-fit: cover;
   object-position: top;
 }
+
+/* ===== Responsive improvements ===== */
+
+.hero-inner > *,
+.about-grid > *,
+.journey-grid > *,
+.contact-inner > *,
+.projects-grid > * {
+  min-width: 0;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+.browser-bar .dot {
+  flex-shrink: 0;
+}
+
+.browser-url {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-links,
+.social-row {
+  flex-wrap: wrap;
+}
+
+.contact-details li,
+.timeline-item h4,
+.achievement-card h4 {
+  overflow-wrap: anywhere;
+}
+
+.btn,
+.btn-hire,
+.nav-toggle,
+.social-icon {
+  min-height: 44px;
+}
+
+.nav-toggle {
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablets and iPads */
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+  .hero-inner {
+    gap: 36px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    padding: 48px 0 56px;
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 460px;
+    min-height: 480px;
+    margin: 0 auto;
+  }
+
+  .hero-sub {
+    max-width: 640px;
+  }
+
+  .about-grid,
+  .journey-grid,
+  .contact-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .about,
+  .services,
+  .projects,
+  .contact {
+    padding: 72px 0;
+  }
+
+  .journey-grid {
+    margin-top: 56px;
+  }
+}
+
+/* Mobile navigation, including portrait tablets */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 24px;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    background: rgba(20, 20, 20, 0.98);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+  }
+
+  .nav-links a::after {
+    bottom: 5px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .btn-hire {
+    display: none;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .section-inner,
+  .hero-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-inner,
+  .navbar.scrolled .nav-inner {
+    padding: 12px 20px;
+  }
+
+  .hero {
+    padding: 32px 0 48px;
+  }
+
+  .hero-inner {
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.9rem, 7.5vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .hero-visual {
+    max-width: 360px;
+    min-height: 440px;
+  }
+
+  .photo-clip-outer {
+    width: 240px;
+    height: 290px;
+  }
+
+  .photo-ghost {
+    width: 200px;
+    height: 280px;
+  }
+
+  .blob {
+    width: 280px;
+    height: 280px;
+  }
+
+  .floating-badge {
+    padding: 8px 12px;
+    font-size: 0.7rem;
+  }
+
+  .badge-left {
+    left: 0;
+    top: 32px;
+  }
+
+  .badge-top {
+    right: 0;
+    top: 0;
+  }
+
+  .photo-chip {
+    width: 60px;
+    height: 60px;
+    left: 4px;
+    bottom: 104px;
+  }
+
+  .terminal {
+    width: min(280px, 100%);
+    right: 0;
+    bottom: 0;
+  }
+
+  .hero-cta {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .hero-cta .btn {
+    flex: 1 1 140px;
+    padding: 12px 18px;
+  }
+
+  .tech-row {
+    gap: 8px;
+  }
+
+  .tech-row li {
+    padding: 6px 10px;
+  }
+
+  .about,
+  .services,
+  .projects,
+  .contact {
+    padding: 52px 0;
+  }
+
+  .section-title.center {
+    margin-bottom: 28px;
+  }
+
+  .services-grid,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .stat {
+    min-width: 0;
+  }
+
+  .stat-number,
+  .stat-suffix {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .service-card,
+  .project-info,
+  .contact-form {
+    padding: 22px;
+  }
+
+  .browser-screen {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .achievement-card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .timeline-item {
+    padding: 16px;
+  }
+
+  .contact-details strong {
+    display: block;
+    width: auto;
+    margin-bottom: 4px;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    font-size: 16px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .section-inner,
+  .hero-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .nav-inner,
+  .navbar.scrolled .nav-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-cta .btn {
+    flex-basis: 100%;
+  }
+
+  .floating-badge {
+    font-size: 0.65rem;
+  }
+
+  .contact-form {
+    padding: 18px;
+  }
+}

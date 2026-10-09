@@ -311,6 +311,25 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
+function closeMobileMenu() {
+  navLinks.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+    closeMobileMenu();
+    navToggle.focus();
+  }
+});
+
+window.matchMedia('(min-width: 901px)').addEventListener('change', (event) => {
+  if (event.matches) {
+    closeMobileMenu();
+  }
+});
+
 // ===== Scroll progress + navbar shrink =====
 const navbar = document.getElementById('navbar');
 const scrollProgress = document.getElementById('scrollProgress');
