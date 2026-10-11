@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minhaz-portfolio-sooty.vercel.app/sitemap.xml
