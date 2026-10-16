@@ -17,12 +17,35 @@ const SOCIAL_LINKS = {
 // gradient accepts any CSS gradient — reuse the palette or add your own.
 const PROJECTS = [
   {
+    name: "PickNest",
+    image: "images/picknest.png",
+    url: "picknest-theta.vercel.app",
+    description:
+      "A responsive ecommerce demo with product search, category filters, cart, wishlist, Google login, demo checkout, order history, and light/dark themes.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Better Auth"
+    ],
+    gradient: "linear-gradient(135deg, #14213d, #c2410c)",
+    liveLink: "https://picknest-theta.vercel.app/",
+    sourceLink: "https://github.com/iamminhaz31/picknest"
+  },
+  {
     name: "BazarDor",
     image: "images/bazardor.png",
     url: "bazardor-app.vercel.app",
     description:
       "A daily market-price app with category browsing, price sorting, market-wise product details, secure login, and editable user profiles.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Better Auth"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Better Auth"
+    ],
     gradient: "linear-gradient(135deg, #059669, #064e3b)",
     liveLink: "https://bazardor-app.vercel.app/",
     sourceLink: "https://github.com/iamminhaz31/bazardor-app"
