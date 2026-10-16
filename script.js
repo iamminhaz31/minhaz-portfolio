@@ -385,18 +385,59 @@ const sectionObserver = new IntersectionObserver((entries) => {
 sections.forEach(sec => sectionObserver.observe(sec));
 
 // ===== Scroll reveal =====
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
+// ===== Smooth scroll reveal =====
+const reducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
 
-function observeReveals(){
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+function observeReveals() {
+  const elements = document.querySelectorAll(".reveal");
+
+  if (
+    reducedMotion.matches ||
+    !("IntersectionObserver" in window)
+  ) {
+    elements.forEach((element) => {
+      element.classList.add("is-visible");
+    });
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: "0px 0px -24px 0px",
+    }
+  );
+
+  elements.forEach((element) => {
+    const parent = element.parentElement;
+
+    const siblings = parent
+      ? Array.from(parent.children).filter((child) =>
+          child.classList.contains("reveal")
+        )
+      : [];
+
+    const index = Math.max(0, siblings.indexOf(element));
+
+    element.style.setProperty(
+      "--reveal-delay",
+      `${Math.min(index, 3) * 80}ms`
+    );
+
+    revealObserver.observe(element);
+  });
 }
+
 observeReveals();
 
 // ===== Skill bar fill on scroll =====
