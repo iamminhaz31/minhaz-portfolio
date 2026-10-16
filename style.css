@@ -1650,3 +1650,64 @@ section[id] {
     font-size: 15px;
   }
 }
+
+/* Wider, shorter project cards */
+#projects {
+  scroll-margin-top: 85px;
+}
+
+#projects .container {
+  width: calc(100% - 48px);
+  max-width: 1360px;
+  margin-inline: auto;
+}
+
+#projectsGrid {
+  max-width: 1360px;
+  gap: 24px;
+}
+
+#projectsGrid .browser-screen {
+  aspect-ratio: 16 / 8;
+}
+
+#projectsGrid .project-info {
+  padding: 20px 24px;
+}
+
+#projectsGrid .project-info h3 {
+  margin-bottom: 8px;
+  font-size: 23px;
+}
+
+#projectsGrid .project-info > p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#projectsGrid .tag-row {
+  gap: 6px;
+  margin: 14px 0;
+}
+
+#projectsGrid .tag-row li {
+  padding: 4px 8px;
+}
+
+#projectsGrid .project-links {
+  padding-top: 4px;
+}
+
+@media (max-width: 640px) {
+  #projects .container {
+    width: calc(100% - 32px);
+  }
+
+  #projectsGrid .browser-screen {
+    aspect-ratio: 16 / 10;
+  }
+
+  #projectsGrid .project-info {
+    padding: 18px;
+  }
+}
