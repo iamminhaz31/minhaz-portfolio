@@ -1,107 +1,9 @@
-/* ============================================================
-   EDIT ZONE — this is the only part you need to touch.
-   Add your real links, projects, blog posts, and testimonials
-   below. Everything on the page reads from these lists.
-   ============================================================ */
-
-// Your social + contact links. Paste your real URLs here —
-// every social icon on the page (contact section + footer)
-// pulls from this one place.
 const SOCIAL_LINKS = {
   github: "https://github.com/iamminhaz31",
   linkedin: "https://www.linkedin.com/in/minhajul-islam-tanjil/",
   email: "minhajultanjil143@gmail.com"
 };
 
-// Your projects. Copy an object below, change the fields, done.
-// gradient accepts any CSS gradient — reuse the palette or add your own.
-const PROJECTS = [
-  {
-    name: "PickNest",
-    image: "images/picknest.png",
-    url: "picknest-theta.vercel.app",
-    description:
-      "A responsive ecommerce demo with product search, category filters, cart, wishlist, Google login, demo checkout, order history, and light/dark themes.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "Better Auth"
-    ],
-    gradient: "linear-gradient(135deg, #14213d, #c2410c)",
-    liveLink: "https://picknest-theta.vercel.app/",
-    sourceLink: "https://github.com/iamminhaz31/picknest"
-  },
-  {
-    name: "BazarDor",
-    image: "images/bazardor.png",
-    url: "bazardor-app.vercel.app",
-    description:
-      "A daily market-price app with category browsing, price sorting, market-wise product details, secure login, and editable user profiles.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "Better Auth"
-    ],
-    gradient: "linear-gradient(135deg, #059669, #064e3b)",
-    liveLink: "https://bazardor-app.vercel.app/",
-    sourceLink: "https://github.com/iamminhaz31/bazardor-app"
-  },
-  {
-    name: "FitLog",
-    image: "images/fitlog.png",
-    url: "fitlog-zeta-ten.vercel.app",
-    description:
-      "A workout library with search, filters, sorting, exercise details, saved workouts, and a personal plan with completion tracking.",
-    tags: ["Next.js", "React", "JavaScript", "Tailwind CSS"],
-    gradient: "linear-gradient(135deg, #657c14, #171d0b)",
-    liveLink: "https://fitlog-zeta-ten.vercel.app/",
-    sourceLink: "https://github.com/iamminhaz31/fitlog"
-  },
-  {
-    name: "DevStack",
-    image: "images/devstack.png",
-    url: "dev-stack-eight.vercel.app",
-    description:
-      "Explore development technologies and build a personal stack. Add technologies, remove individual items, or clear the entire stack.",
-    tags: ["React", "JavaScript", "Tailwind CSS", "Vite"],
-    gradient: "linear-gradient(135deg, #4338ca, #1e1b4b)",
-    liveLink: "https://dev-stack-eight.vercel.app/",
-    sourceLink: "https://github.com/iamminhaz31/dev-stack"
-  }
-];
-
-// Your blog posts. Link can point to a Medium/Hashnode/dev.to post or a local page.
-const BLOG_POSTS = [
-  {
-    tag: "React",
-    title: "Rethinking State Management in 2026",
-    excerpt: "Why fewer libraries and more native React features have made state simpler to reason about.",
-    date: "Jun 2026",
-    link: "#"
-  },
-  {
-    tag: "Backend",
-    title: "Designing REST APIs That Age Well",
-    excerpt: "Small conventions that keep an API predictable as it grows past its first few endpoints.",
-    date: "May 2026",
-    link: "#"
-  },
-  {
-    tag: "Performance",
-    title: "Shaving Seconds Off First Load",
-    excerpt: "A practical checklist for images, fonts, and JS bundles that actually moves the needle.",
-    date: "Apr 2026",
-    link: "#"
-  }
-  // Add more posts by copying the block above.
-];
-
-// Your education. Add more entries the same way if you have more than one degree.
-// NOTE: dates and grade are placeholders below — update them to your exact figures.
 const EDUCATION = [
   {
     degree: "B.Sc. in Computer Science and Engineering",
@@ -112,7 +14,7 @@ const EDUCATION = [
   }
 ];
 
-// Your work / teaching experience.
+// Check these two. Change them to your real roles if they are not correct.
 const EXPERIENCE = [
   {
     role: "Web Development Instructor",
@@ -126,10 +28,8 @@ const EXPERIENCE = [
     period: "2022 – Present",
     detail: "Designed and built client websites end-to-end — UI, backend, and deployment."
   }
-  // Add more roles by copying the block above.
 ];
 
-// Your achievements and awards.
 const ACHIEVEMENTS = [
   {
     title: "Top 3 — Integrated Design Project, 2025",
@@ -143,38 +43,11 @@ const ACHIEVEMENTS = [
   }
 ];
 
-// Your client testimonials. Avatar text is auto-generated from the name's initials.
-const TESTIMONIALS = [
-  {
-    name: "Rafiul Ahmed",
-    role: "Founder, Deskhive",
-    quote: "Minhazz turned our outdated site into something we're actually proud to share. Communication was clear the whole way through.",
-    stars: 5
-  },
-  {
-    name: "Sadia Nur",
-    role: "Product Manager, Loopwave",
-    quote: "Fast, detail-oriented, and easy to work with. The site loads instantly and looks great on every device we tested.",
-    stars: 5
-  },
-  {
-    name: "Tanvir Karim",
-    role: "CEO, Northbrick",
-    quote: "Great eye for design and even better at explaining technical decisions in plain language. Would hire again.",
-    stars: 4
-  }
-  // Add more testimonials by copying the block above.
-];
-
 /* ============================================================
-   Below this line is rendering + interaction logic.
-   You shouldn't need to edit anything past here.
+   Rendering + interaction logic
    ============================================================ */
 
-// ===== Social icon SVGs =====
 const SOCIAL_ICONS = {
-  facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.5 3.1 15.4 3 14.2 3c-2.5 0-4.3 1.6-4.3 4.4v2.4H7.2v3.2h2.7v8h3.6z"/></svg>',
-  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>',
   github: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.35 1.08 2.92.83.09-.65.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>',
   linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V21h3.38V8.5zM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94zM21 21v-6.87c0-3.28-1.75-4.8-4.08-4.8-1.88 0-2.72 1.03-3.19 1.76V8.5H10.4c.04.9 0 12.5 0 12.5h3.33v-6.98c0-.37.03-.75.14-1.02.3-.75 1-1.53 2.17-1.53 1.53 0 2.14 1.16 2.14 2.87V21H21z"/></svg>',
   email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -185,9 +58,7 @@ function socialHref(key, value){
 }
 
 function renderSocialLinks(){
-  const rows = document.querySelectorAll('#socialRow, #footerSocial');
-  rows.forEach(row => {
-    if (!row) return;
+  document.querySelectorAll('#socialRow, #footerSocial').forEach(row => {
     row.innerHTML = Object.entries(SOCIAL_LINKS)
       .filter(([key]) => SOCIAL_ICONS[key])
       .map(([key, value]) => `
@@ -197,7 +68,6 @@ function renderSocialLinks(){
   });
 }
 
-// ===== Render projects =====
 function renderProjects(){
   const grid = document.getElementById('projectsGrid');
   if (!grid) return;
@@ -209,68 +79,23 @@ function renderProjects(){
           <span class="browser-url">${p.url}</span>
         </div>
         <div class="browser-screen">
-  <img
-    src="${p.image}"
-    alt="${p.name} website preview"
-    class="project-preview"
-    loading="lazy"
-  />
-</div>
+          <img src="${p.image}" alt="${p.name} website preview" class="project-preview" loading="lazy">
+        </div>
       </div>
       <div class="project-info">
         <h3>${p.name}</h3>
         <p>${p.description}</p>
         <ul class="tag-row">${p.tags.map(t => `<li>${t}</li>`).join('')}</ul>
         <div class="project-links">
-          <a href="${p.liveLink}" class="link-arrow" target="_blank" rel="noopener">Live Site →</a>
-          <a href="${p.sourceLink}" class="link-arrow" target="_blank" rel="noopener">Source →</a>
+          <a href="project.html?id=${p.id}" class="link-arrow">View Details</a>
+          <a href="${p.liveLink}" class="link-arrow" target="_blank" rel="noopener">Live Site</a>
+          <a href="${p.sourceLink}" class="link-arrow" target="_blank" rel="noopener">Source</a>
         </div>
       </div>
     </article>
   `).join('');
 }
 
-// ===== Render blog posts =====
-function renderBlog(){
-  const grid = document.getElementById('blogGrid');
-  if (!grid) return;
-  grid.innerHTML = BLOG_POSTS.map(b => `
-    <article class="blog-card reveal">
-      <p class="blog-tag">// ${b.tag}</p>
-      <h3>${b.title}</h3>
-      <p>${b.excerpt}</p>
-      <div class="blog-meta">
-        <span>${b.date}</span>
-        <a href="${b.link}" target="_blank" rel="noopener">Read more →</a>
-      </div>
-    </article>
-  `).join('');
-}
-
-// ===== Render testimonials =====
-function initials(name){
-  return name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
-}
-
-function renderTestimonials(){
-  const grid = document.getElementById('testimonialsGrid');
-  if (!grid) return;
-  grid.innerHTML = TESTIMONIALS.map(t => `
-    <div class="testimonial-card reveal">
-      <p class="stars">${'★'.repeat(t.stars)}${'☆'.repeat(5 - t.stars)}</p>
-      <p class="quote">"${t.quote}"</p>
-      <div class="testimonial-person">
-        <span class="avatar">${initials(t.name)}</span>
-        <div>
-          <p class="person-name">${t.name}</p>
-          <p class="person-role">${t.role}</p>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-// ===== Render education + experience timeline =====
 function renderTimeline(){
   const track = document.getElementById('timelineTrack');
   if (!track) return;
@@ -289,7 +114,6 @@ function renderTimeline(){
   `).join('');
 }
 
-// ===== Render achievements =====
 const TROPHY_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 5H4a1 1 0 0 0-1 1c0 2.5 1.5 4.3 4 4.8M17 5h3a1 1 0 0 1 1 1c0 2.5-1.5 4.3-4 4.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 function renderAchievements(){
@@ -308,17 +132,20 @@ function renderAchievements(){
 
 renderSocialLinks();
 renderProjects();
-renderBlog();
-renderTestimonials();
 renderTimeline();
 renderAchievements();
 
-// ===== Footer year =====
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // ===== Mobile nav toggle =====
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+
+function closeMobileMenu() {
+  navLinks.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}
 
 navToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
@@ -327,18 +154,8 @@ navToggle.addEventListener('click', () => {
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', closeMobileMenu);
 });
-
-function closeMobileMenu() {
-  navLinks.classList.remove('open');
-  navToggle.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-}
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && navLinks.classList.contains('open')) {
@@ -348,9 +165,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 window.matchMedia('(min-width: 901px)').addEventListener('change', (event) => {
-  if (event.matches) {
-    closeMobileMenu();
-  }
+  if (event.matches) closeMobileMenu();
 });
 
 // ===== Scroll progress + navbar shrink =====
@@ -364,7 +179,6 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', scrollTop > 40);
 }, { passive: true });
 
-// ===== Active nav link on scroll =====
 // ===== Active nav link on scroll =====
 const sections = ['top', 'about', 'services', 'projects', 'contact']
   .map(id => document.getElementById(id))
@@ -385,55 +199,31 @@ const sectionObserver = new IntersectionObserver((entries) => {
 sections.forEach(sec => sectionObserver.observe(sec));
 
 // ===== Scroll reveal =====
-// ===== Smooth scroll reveal =====
-const reducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-);
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function observeReveals() {
   const elements = document.querySelectorAll(".reveal");
 
-  if (
-    reducedMotion.matches ||
-    !("IntersectionObserver" in window)
-  ) {
-    elements.forEach((element) => {
-      element.classList.add("is-visible");
-    });
+  if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+    elements.forEach((element) => element.classList.add("is-visible"));
     return;
   }
 
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.08,
-      rootMargin: "0px 0px -24px 0px",
-    }
-  );
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: "0px 0px -24px 0px" });
 
   elements.forEach((element) => {
     const parent = element.parentElement;
-
     const siblings = parent
-      ? Array.from(parent.children).filter((child) =>
-          child.classList.contains("reveal")
-        )
+      ? Array.from(parent.children).filter((child) => child.classList.contains("reveal"))
       : [];
-
     const index = Math.max(0, siblings.indexOf(element));
-
-    element.style.setProperty(
-      "--reveal-delay",
-      `${Math.min(index, 3) * 80}ms`
-    );
-
+    element.style.setProperty("--reveal-delay", `${Math.min(index, 3) * 80}ms`);
     revealObserver.observe(element);
   });
 }
@@ -462,9 +252,9 @@ const timelineObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 document.querySelectorAll('.timeline-item').forEach(el => timelineObserver.observe(el));
 
-// ===== Reusable 3D tilt effect (photo + achievement cards) =====
+// ===== 3D tilt effect =====
 function addTilt(el, strength = 10){
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (reducedMotion.matches) return;
   el.addEventListener('mousemove', (e) => {
     const rect = el.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -499,10 +289,10 @@ const statObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
 
-// ===== Hero ambient glow follows cursor =====
+// ===== Hero glow follows cursor =====
 const hero = document.querySelector('.hero');
 const heroGlow = document.getElementById('heroGlow');
-if (hero && heroGlow && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+if (hero && heroGlow && !reducedMotion.matches) {
   hero.addEventListener('mousemove', (e) => {
     const rect = hero.getBoundingClientRect();
     heroGlow.style.setProperty('--mx', `${e.clientX - rect.left}px`);
@@ -523,35 +313,34 @@ document.querySelectorAll('.magnetic').forEach(btn => {
   });
 });
 
-// ===== Terminal typewriter (signature hero element) =====
+// ===== Terminal typewriter =====
 const typewriterEl = document.getElementById('typewriter');
 const CODE_LINES = [
-  { text: "const developer = {", color: "text" },
-  { text: "  name: 'Minhajul Islam Tanjil',", color: "text" },
-  { text: "  role: 'Full-Stack Developer',", color: "text" },
-  { text: "  stack: ['React', 'Next.js', 'TypeScript'],", color: "text" },
-  { text: "  available: true", color: "text" },
-  { text: "};", color: "text" }
+  "const developer = {",
+  "  name: 'Minhajul Islam Tanjil',",
+  "  role: 'Full-Stack Developer',",
+  "  stack: ['React', 'Next.js', 'TypeScript'],",
+  "  available: true",
+  "};"
 ];
 
 async function typeTerminal(){
   if (!typewriterEl) return;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) {
-    typewriterEl.textContent = CODE_LINES.map(l => l.text).join('\n');
+  if (reducedMotion.matches) {
+    typewriterEl.textContent = CODE_LINES.join('\n');
     return;
   }
-  for (const line of CODE_LINES) {
-    for (let i = 0; i <= line.text.length; i++) {
-      typewriterEl.textContent = CODE_LINES.slice(0, CODE_LINES.indexOf(line)).map(l => l.text).join('\n') +
-        (CODE_LINES.indexOf(line) > 0 ? '\n' : '') + line.text.slice(0, i);
+  for (let l = 0; l < CODE_LINES.length; l++) {
+    const before = CODE_LINES.slice(0, l).join('\n') + (l > 0 ? '\n' : '');
+    for (let i = 0; i <= CODE_LINES[l].length; i++) {
+      typewriterEl.textContent = before + CODE_LINES[l].slice(0, i);
       await new Promise(r => setTimeout(r, 18));
     }
   }
 }
 typeTerminal();
 
-// ===== Contact form (sends via Formspree) =====
+// ===== Contact form (Formspree) =====
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 const submitBtn = form.querySelector('.form-submit');
