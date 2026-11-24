@@ -12,6 +12,16 @@ if (!project) {
   `;
 } else {
   document.title = `${project.name} | Minhajul Islam Tanjil`;
+
+  const sourceButtons = project.serverLink
+    ? `
+      <a href="${project.sourceLink}" class="btn btn-outline" target="_blank" rel="noopener">Client repository</a>
+      <a href="${project.serverLink}" class="btn btn-outline" target="_blank" rel="noopener">Server repository</a>
+    `
+    : `
+      <a href="${project.sourceLink}" class="btn btn-outline" target="_blank" rel="noopener">GitHub repository</a>
+    `;
+
   root.innerHTML = `
     <a href="index.html#projects" class="back-link">← Back to projects</a>
     <h1 class="detail-title">${project.name}</h1>
@@ -23,7 +33,7 @@ if (!project) {
 
     <div class="detail-actions">
       <a href="${project.liveLink}" class="btn btn-primary" target="_blank" rel="noopener">Live project</a>
-      <a href="${project.sourceLink}" class="btn btn-outline" target="_blank" rel="noopener">GitHub repository</a>
+      ${sourceButtons}
     </div>
 
     <section class="detail-block">

@@ -1,5 +1,49 @@
 const PROJECTS = [
   {
+    id: "pizzahub",
+    name: "PizzaHub",
+    image: "images/pizzahub.png",
+    url: "pizzahub-client-nine.vercel.app",
+    description:
+      "An online pizza ordering platform with separate dashboards for customers, vendors and admins. Customers can search and order pizzas, vendors manage their menu and orders, and admins manage the whole platform.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"],
+    liveLink: "https://pizzahub-client-nine.vercel.app/",
+    sourceLink: "https://github.com/iamminhaz31/pizzahub-client",
+    serverLink: "https://github.com/iamminhaz31/pizzahub-server",
+    challenges: [
+      "Building search, category and location filters together with price sorting.",
+      "Keeping login secure with JWT and checking user roles on the server.",
+      "Making the dashboards and menu pages work well on every screen size."
+    ],
+    improvements: [
+      "Add online payment for pizza orders.",
+      "Show live order status updates to customers.",
+      "Let customers rate and review pizzas."
+    ]
+  },
+  {
+    id: "neighborhub",
+    name: "NeighborHub",
+    image: "images/neighborhub.png",
+    url: "events-client-ebon.vercel.app",
+    description:
+      "A community service events platform. Users can create events, join events and track them, with email and Google login.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"],
+    liveLink: "https://events-client-ebon.vercel.app/",
+    sourceLink: "https://github.com/iamminhaz31/events-client",
+    serverLink: "https://github.com/iamminhaz31/events-server",
+    challenges: [
+      "Making sure a user can join an event only once.",
+      "Letting users edit or delete only their own events.",
+      "Protecting the API routes with JWT."
+    ],
+    improvements: [
+      "Add event search and category filters.",
+      "Send reminders before an event starts.",
+      "Let users add photos to events."
+    ]
+  },
+  {
     id: "picknest",
     name: "PickNest",
     image: "images/picknest.png",
