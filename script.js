@@ -68,10 +68,12 @@ function renderSocialLinks(){
   });
 }
 
-function renderProjects(){
-  const grid = document.getElementById('projectsGrid');
-  if (!grid) return;
-  grid.innerHTML = PROJECTS.map(p => `
+// ===== Projects: show 4 first, "See More" shows the rest =====
+const PROJECTS_VISIBLE = 4;
+let showAllProjects = false;
+
+function projectCardHTML(p){
+  return `
     <article class="project-card reveal">
       <div class="browser-frame">
         <div class="browser-bar">
@@ -93,7 +95,49 @@ function renderProjects(){
         </div>
       </div>
     </article>
-  `).join('');
+  `;
+}
+
+function renderProjects(){
+  const grid = document.getElementById('projectsGrid');
+  if (!grid) return;
+  const list = showAllProjects ? PROJECTS : PROJECTS.slice(0, PROJECTS_VISIBLE);
+  grid.innerHTML = list.map(projectCardHTML).join('');
+}
+
+function setupProjectsToggle(){
+  const grid = document.getElementById('projectsGrid');
+  if (!grid || PROJECTS.length <= PROJECTS_VISIBLE) return;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'projects-more';
+  wrap.style.cssText = 'display:flex;justify-content:center;margin-top:36px;';
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'btn btn-outline';
+  btn.setAttribute('aria-controls', 'projectsGrid');
+
+  function updateLabel(){
+    btn.textContent = showAllProjects
+      ? 'See Less'
+      : `See More (${PROJECTS.length - PROJECTS_VISIBLE})`;
+    btn.setAttribute('aria-expanded', String(showAllProjects));
+  }
+
+  btn.addEventListener('click', () => {
+    showAllProjects = !showAllProjects;
+    renderProjects();
+    updateLabel();
+    observeReveals();
+    if (!showAllProjects) {
+      document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  wrap.appendChild(btn);
+  grid.after(wrap);
+  updateLabel();
 }
 
 function renderTimeline(){
@@ -132,6 +176,7 @@ function renderAchievements(){
 
 renderSocialLinks();
 renderProjects();
+setupProjectsToggle();
 renderTimeline();
 renderAchievements();
 
